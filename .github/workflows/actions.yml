@@ -10,11 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: 'Install Node'
-      - uses: actions/setup-node@v1
+        uses: actions/setup-node@v1
       - name: 'Install NPM dependencies'
-      - run: npm install
+        run: npm install
       - name: 'Run code'
-      - run: node index.js
+        run: node index.js
         env:
           WHEATHER_TOKEN_API: ${{ secrets.WHEATHER_TOKEN_API }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
